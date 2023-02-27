@@ -62,7 +62,7 @@
     <Compile Include="Core\MyBindingList.cs" />
     <Compile Include="Model\DataBase.cs" />
     <Compile Include="Model\MainModel.cs" />
-    <Compile Include="Tables\TableElement.cs" />
+    <Compile Include="Tables\ITableElement.cs" />
     <Compile Include="Tables\Roles.cs" />
     <Compile Include="Tables\Users.cs" />
     <Compile Include="ViewModel\SingUpVM.cs" />

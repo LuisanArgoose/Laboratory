@@ -10,7 +10,6 @@ namespace Laboratory.Core
 {
     public interface IMyBindingList : IBindingList
     {
-        string GetDeletedItem();
         void Reload();
     }
 }

@@ -19,11 +19,6 @@ namespace Laboratory.Core
             Reload();
             ListChanged += IsListChanged;
         }
-        private string _deletedItem;
-        public string GetDeletedItem() 
-        { 
-            return _deletedItem; 
-        }
         protected override void RemoveItem(int index)
         {
             ITableElement one = this[index];
@@ -112,7 +107,6 @@ namespace Laboratory.Core
                 connection.Close();
                 _commandStack = "";
             }
-
         }
     }
 }
