@@ -10,38 +10,35 @@ namespace Laboratory.Core
 {
     public class Fabric
     {
+        private static string _selectCommand;
+        private static string _getCurrentIdCommand;
+        private static Func<SqlDataReader, ITableElement> _getObject;
+        private static void Switch(string type)
+        {
+            switch (type)
+            {
+                case "Laboratory.Tables.Roles":
+                    _selectCommand = Roles.GetSelect();
+                    _getCurrentIdCommand = Roles.GetCurrentId();
+                    _getObject = Roles.GetObject;
+                    break;
+            }
+        }
         public static string GetSelect(string type)
         {
-            string SelectCommand = "";
-            switch (type)
-            {
-                case "Laboratory.Tables.Roles":
-                    SelectCommand = Roles.GetSelect();
-                    break;
-            }
-            return SelectCommand;
+            Switch(type);
+            return _selectCommand;
         }
+        
         public static string GetCurrentId(string type)
         {
-            string SelectCommand = "";
-            switch (type)
-            {
-                case "Laboratory.Tables.Roles":
-                    SelectCommand = Roles.GetCurrentId();
-                    break;
-            }
-            return SelectCommand;
+            Switch(type);
+            return _getCurrentIdCommand;
         }
         public static Func<SqlDataReader, ITableElement> GetObject(string type)
         {
-            Func<SqlDataReader, ITableElement> action = null;
-            switch (type)
-            {
-                case "Laboratory.Tables.Roles":
-                    action = Roles.GetObject;
-                    break;
-            }
-            return action;
+            Switch(type);
+            return _getObject;
         }
     }
 }

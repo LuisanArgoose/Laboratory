@@ -35,16 +35,12 @@ namespace Laboratory.Tables
             }
             catch { }
             return one;
-            
-            
         }
         static public string GetCurrentId()
         {
             string querry = "select IDENT_CURRENT('Roles')";
             return querry;
         }
-
-
 
         public string Insert(int index)
         {

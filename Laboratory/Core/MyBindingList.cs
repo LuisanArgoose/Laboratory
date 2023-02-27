@@ -95,6 +95,8 @@ namespace Laboratory.Core
         }
         public void SaveChanges()
         {
+            if (_commandStack == "")
+                return;
             using (SqlConnection connection = new SqlConnection(DataBase.GetConnectionString()))
             {
                 connection.Open();

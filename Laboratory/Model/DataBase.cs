@@ -20,14 +20,10 @@ namespace Laboratory.Model
         {
             return _connectionString;
         }
-        private string _commandStack;
         public DataBase( string connectionString) 
         {
-            _commandStack = "";
             _connectionString = connectionString;
-
             Init();
-            //ReloadDataBase();
 
         }
         private void Init()
@@ -42,7 +38,7 @@ namespace Laboratory.Model
         }
         public void SaveChanges()
         {
-
+            _roles.SaveChanges();
         }
         private MyBindingList<Roles> _roles;
         public MyBindingList<Roles> GetRoles() 
