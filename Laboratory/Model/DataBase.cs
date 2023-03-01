@@ -53,5 +53,30 @@ namespace Laboratory.Model
             return _users;
         }
 
+
+        public void SingIn( string login, string password)
+        {
+            //string exception;
+            var users = GetUsers();
+            users.Reload();
+            try
+            {
+                var user = users.Single(Us => Us.Login == login && Us.Password == password);
+                _singInErrors = "Успешный вход";
+            }
+            catch( Exception e)
+            {
+                _singInErrors = "Неверный логин или пароль";
+            }
+            RaisePropertyChanged();
+        }
+        private string _singInErrors;
+        public string SingInError()
+        {
+            return _singInErrors;
+        }
+
+
+
     }
 }

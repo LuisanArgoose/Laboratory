@@ -1,5 +1,4 @@
-﻿using Laboratory.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,15 +15,13 @@ using System.Windows.Shapes;
 namespace Laboratory.View
 {
     /// <summary>
-    /// Логика взаимодействия для SingUp.xaml
+    /// Логика взаимодействия для Laborant.xaml
     /// </summary>
-    public partial class SingUp : Window
+    public partial class Laborant : Window
     {
-        public SingUp()
+        public Laborant()
         {
             InitializeComponent();
-            MainModel.GetViews().SetSingUp(this);
         }
-
     }
 }

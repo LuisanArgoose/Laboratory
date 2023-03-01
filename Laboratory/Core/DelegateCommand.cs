@@ -18,6 +18,7 @@ namespace Laboratory.Core
             this.execute = execute;
         }
 
+
         // Методы, необходимые для ICommand
         public void Execute(object param)
         {

@@ -5,14 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Laboratory.ViewModel"
         mc:Ignorable="d"
-        Title="SingUp" Height="400" Width="800">
+        Title="SingUp" Height="240" Width="300">
     <Window.DataContext>
         <vm:SingUpVM/>
     </Window.DataContext>
     <Grid>
-        <DataGrid ItemsSource="{Binding Collection}" Margin="0,0,0,65"/>
-        <Button Content="Save" Command="{Binding SaveCommand}" HorizontalAlignment="Left" Margin="10,354,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Reload" Command="{Binding ReloadCommand}" HorizontalAlignment="Left" Margin="90,354,0,0" VerticalAlignment="Top" Width="75"/>
+        <StackPanel >
+            <StackPanel MinWidth="100"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="Вход" HorizontalContentAlignment="Center"/>
+                <Label Content="Логин" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="wav" Text="{Binding Login}"/>
+                <Label Content="Пароль" HorizontalContentAlignment="Center"/>
+                <PasswordBox x:Name="Psw" HorizontalContentAlignment="Stretch"/>
+                <Button Content="Войти" Command="{Binding SingInCommand}" Margin="0,10,0,0" CommandParameter="{Binding ElementName=Psw}"/>
+                <Label Content="{Binding Errors}" HorizontalContentAlignment="Center" Foreground="Red"/>
+            </StackPanel>
+            <Grid>
+
+            </Grid>
+        </StackPanel>
 
     </Grid>
 </Window>

@@ -60,6 +60,7 @@
     <Compile Include="Core\Fabric.cs" />
     <Compile Include="Core\IMyBindingList.cs" />
     <Compile Include="Core\MyBindingList.cs" />
+    <Compile Include="Core\SingInCommand.cs" />
     <Compile Include="Model\DataBase.cs" />
     <Compile Include="Model\MainModel.cs" />
     <Compile Include="Tables\ITableElement.cs" />
@@ -67,6 +68,18 @@
     <Compile Include="Tables\TableElement.cs" />
     <Compile Include="Tables\Users.cs" />
     <Compile Include="ViewModel\SingUpVM.cs" />
+    <Compile Include="View\Accountant.xaml.cs">
+      <DependentUpon>Accountant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laborant.xaml.cs">
+      <DependentUpon>Laborant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LaborantResearcher.xaml.cs">
+      <DependentUpon>LaborantResearcher.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SingUp.xaml.cs">
       <DependentUpon>SingUp.xaml</DependentUpon>
     </Compile>
@@ -74,6 +87,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\Views.cs" />
+    <Page Include="View\Accountant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Laborant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LaborantResearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SingUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

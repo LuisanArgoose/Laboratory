@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratory.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,7 @@ namespace Laboratory
     /// </summary>
     public partial class App : Application
     {
+        
+        
     }
 }
