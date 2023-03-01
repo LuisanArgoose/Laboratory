@@ -22,6 +22,12 @@ namespace Laboratory.Core
                     _getCurrentIdCommand = Roles.GetCurrentId();
                     _getObject = Roles.GetObject;
                     break;
+                case "Laboratory.Tables.Users":
+                    _selectCommand = Users.GetSelect();
+                    _getCurrentIdCommand = Users.GetCurrentId();
+                    _getObject = Users.GetObject;
+                    break;
+
             }
         }
         public static string GetSelect(string type)

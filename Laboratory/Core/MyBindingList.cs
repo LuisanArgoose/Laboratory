@@ -102,7 +102,7 @@ namespace Laboratory.Core
                 }
                 catch( Exception e)
                 {
-
+                    
                 }
                 connection.Close();
                 _commandStack = "";

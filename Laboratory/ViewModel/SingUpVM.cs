@@ -16,14 +16,14 @@ namespace Laboratory.ViewModel
         {
             MainModel.GetDataBase().PropertyChanged += (s, a) => { RaisePropertyChanged(nameof(Collection)); };
         }
-        public ICollection Collection { get => MainModel.GetDataBase().GetRoles(); }
+        public ICollection Collection { get => MainModel.GetDataBase().GetUsers(); }
         public DelegateCommand ReloadCommand 
         { 
-            get =>new DelegateCommand( MainModel.GetDataBase().GetRoles().Reload); 
+            get =>new DelegateCommand( MainModel.GetDataBase().GetUsers().Reload); 
         }
         public DelegateCommand SaveCommand
         {
-            get => new DelegateCommand(MainModel.GetDataBase().GetRoles().SaveChanges);
+            get => new DelegateCommand(MainModel.GetDataBase().GetUsers().SaveChanges);
         }
     }
 }

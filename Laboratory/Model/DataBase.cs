@@ -29,11 +29,13 @@ namespace Laboratory.Model
         private void Init()
         {
             SetProperty(ref _roles, new MyBindingList<Roles>());
+            SetProperty(ref _users, new MyBindingList<Users>());
         }
         
         public void Reload()
         {
             _roles.Reload();
+            _users.Reload();
 
         }
         public void SaveChanges()
@@ -44,6 +46,11 @@ namespace Laboratory.Model
         public MyBindingList<Roles> GetRoles() 
         { 
             return _roles; 
+        }
+        private MyBindingList<Users> _users;
+        public MyBindingList<Users> GetUsers()
+        {
+            return _users;
         }
 
     }
